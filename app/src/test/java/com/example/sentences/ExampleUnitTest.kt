@@ -5,13 +5,16 @@ import org.junit.Test
 import org.junit.Assert.*
 
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * SentenceTest, which will execute on the development machine (host).
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class SentenceGeneratorTests {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun generateSentenceTest() {
+        val worker = SentenceGenerator()
+        val sentence = worker.sentence
+        assertTrue(sentence.length > 5)
+        println(sentence)
     }
 }
